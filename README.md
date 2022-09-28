@@ -62,7 +62,7 @@
  
 ## Commands to remove Docker Containers and Images
 
-### Note: To remove a container we need to first stop container then we can remove it. We can remove an image only if we stopped a container and deleted a container.
+- Note: To remove a container we need to first stop container then we can remove it. We can remove an image only if we stopped a container and deleted a container.
 
  ### docker rm <container_id>
    - to remove a container with a specific container id
