@@ -21,10 +21,10 @@ Some Basic Docker Commands
 - docker run <imagename> or docker run <imagename>:version
   to pull and run a docker image or to pull and run a specific version of docker image
 
-- docker start <container_id/name>
+- docker start <container_id>
   to start a container with specific id
 
-- docker stop <container_id/name>
+- docker stop <container_id>
   to stop a container with specific id
 
 - docker run -d <imagename> 
@@ -50,7 +50,7 @@ Docker commands for troubleshooting
    shows logs of the container for trouble shooting. if any container is facing some issues we can use logs 
    to detect.
 
- - docker run -d -p6001:6000 --name new_name oldname
+ - docker run -d -p6001:6000 --name new_name imagename
    this renames a previous image with old name to new name and creates a new container image.
  
  - docker exec -it <image_id> /bin/bash
