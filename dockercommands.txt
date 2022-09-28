@@ -11,7 +11,7 @@ Difference between Virtual Machine and Docker
 
 -Both are virtualization technologies. Virtual machine utilizes both the layers of Operation system(kernel and applications)  while docker only runs on application layer of a Host OS.
 
-
+==================================================================================================================
 
 Some Basic Docker Commands
 
@@ -43,6 +43,7 @@ Some Basic Docker Commands
 - docker images
   list all the images on our local system
 
+=========================================================================
 
 Docker commands for troubleshooting
 
@@ -55,6 +56,8 @@ Docker commands for troubleshooting
  
  - docker exec -it <image_id> /bin/bash
    to get inside the container and execute terminal
+
+==========================================================================
  
 Commands to remove Docker Containers and Images
 
@@ -67,4 +70,5 @@ Note: To remove a container we need to first stop container then we can remove i
    to remove an image from our local system
 
 
+==================================================================================================================================
 
