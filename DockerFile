@@ -1,0 +1,33 @@
+the first line in the docker file is always from image.
+
+FROM node
+
+
+we can add next environment variables if we wanted to its better to define environment variables in docker compose file then here but its always an option. 
+
+ENV MONGO_DB_USERNAME=admin
+    MONGO_DB_PASSWORD=pass
+
+The next command is RUN which is used tO execute any linux command. This directory below will be created inside in the docker container not on the host
+
+RUN mkdir -p /home/app	
+
+COPY command will copy all the files in current directory to /home/app in docker container . Here "." means current directory
+COPY . /home/app
+
+The last command is CMD command. it basically executes entry point linux command. This command below will run server.js file using node and how node is running is
+we added FROM node at the top which will install node in our container and this will it will be able to run node command.
+
+CMD["node","server.js"]
+
+=======================================================================
+
+so the final docker file will look like as:
+
+FROM node
+ENV MONGO_DB_USERNAME=admin
+    MONGO_DB_PASSWORD=pass
+RUN mkdir -p /home/app  
+COPY . /home/app
+CMD["node","server.js"]
+
