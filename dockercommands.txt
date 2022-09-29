@@ -70,7 +70,7 @@ Note: To remove a container we need to first stop container then we can remove i
    to remove an image from our local system
 
 
-==================================================================================================================================
+=========================================================================
 
 Docker Network 
 Docker creates its own isolated docker network where the containers are running in.When we deploy two containers in the same network we the containers can communicate with each other with just the container name without local host or port no.
@@ -81,4 +81,12 @@ docker network ls
 
 docker network create <network_name>
 - to create a docker network with a custom name
+
+======================================================================
+
+In order to create a docker image from a docker file we need to run following commmand:
+
+
+docker build -t app_name:version                         #here -t is for tagging and app_name could be any name and version can be whatever we specify
+
 
