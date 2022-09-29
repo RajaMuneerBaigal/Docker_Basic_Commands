@@ -1,3 +1,5 @@
+Docker file is a blueprint for a docker image. Every docker image on dockerhub is built using a docker file.
+
 the first line in the docker file is always from image.
 
 FROM node
