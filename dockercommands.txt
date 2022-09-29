@@ -90,3 +90,18 @@ In order to create a docker image from a docker file we need to run following co
 docker build -t app_name:version                         #here -t is for tagging and app_name could be any name and version can be whatever we specify
 
 
+==================================================================
+
+Docker volumes
+	-Docker volumes are a way for data persistency. With docker volumes we map local host path to a database path and this way data stored on docker volume is replicated to host volume and when a container is stopped we have our data back at restart.
+	 There are three types of volumes. 
+		- host volume  : here we specify to which path in host should be mapped to docker volume path
+		  i.e docker run -v /home/raju/mount/data:/var/lib/mysql/data
+		
+		- anonymous volume : we do not specify any refrence path to connect to docker volume.It is created by its own.
+		  i.e docker run -v  /var/lib/mysql/data
+		
+		- named volumes :  improvement to anonymous volumes. It specifies the name of the folder on the host file system.we can write any name
+		  i.e docker run -v name:/var/lib/mysql/data
+
+Note: Any of these docker volumes method can be used in docker compose file in any service.
