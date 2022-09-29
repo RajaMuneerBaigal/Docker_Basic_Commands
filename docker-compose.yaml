@@ -17,3 +17,7 @@ services:
             - ME_CONFIG_MONGODB_ADMINUSERNAME=admin
             - ME_CONFIG_MONGODB_ADMINPASSWORD=password
             - ME_CONFIG_MONGODB_SERVER=mongodb
+
+volumes:
+     my-db:
+        driver: local
