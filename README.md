@@ -76,3 +76,19 @@
   - docker kill $(docker ps -q)
   - docker restart $(docker ps -a -q)
   
+
+  ==============================================================================
+  
+  ## Commands to delete all volumes, containers and images
+  - docker container prune
+  - docker volume prune
+  - docker network prune
+  - docker image prune
+
+  ==============================================================================
+  
+  ## Commands to delete all volumes, containers and images
+  - docker volume ls
+  - docker network ls
+  - docker image ls
+  - 
