@@ -71,3 +71,8 @@
    - to remove an image from our local system
 
   ==============================================================================
+  
+  ## Commands to stop all containers at once and restart them 
+  - docker kill $(docker ps -q)
+  - docker restart $(docker ps -a -q)
+  
