@@ -91,4 +91,4 @@
   - docker volume ls
   - docker network ls
   - docker image ls
-  - 
+  - docker container ls
