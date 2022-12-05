@@ -128,7 +128,22 @@
   -  docker swarm join --token <token>                      : to join a worker node to cluster 
   -  docker swarm join-token worker/manager                 : to get the token after missing it. this will give token for joining nodes as manager or wrk
   -  docker node rm -f <node-name>                          : to remove a node from cluster or swarm
-  
-  
+  -  docker node inspect <node-name>                        : to inspect a node just like container inspect
+  -  docker node promote <node1> <node2>                    : to promote a node to manager node
+  -  docker node demote <node1> <node2>                     : to demote a node to worker node
+  -  watch docker container ls                              : list all containers after one seconds
+  -  docker service create <imageName>                      : will create a service on all nodes inside the cluster
+  -  docker service inspect <service-id>                    : to inspect a service with service id
+  -  docker service logs <service-id>                       : to find the logs of the service created
+  -  docker service rm <service-name>                       : to remove a service
+  -  docker service scale <name>=5
+  -  docker service ps <service-name>                       : to list a service with its name
+  -  docker node update --availability drain <node-name>    : it will not allocate services to that node specified
+  -  docker node upate --availability active <node-name>    : it will active the node again and tasks will be assigned to it.
+  ### Some important flags regarding creating services in docker swarm
+   -  --name <service-name>                                 : flag used to give name to a service
+   -  --mode global                                         : flag used to create service in every node including manager
+   -  --replicas <number>                                   : how many replicas of current service you want to run in cluster or docker swarm.  
   ### The commands to be run on worker nodes are as follows:
-  - docker swarm leave                     : if a node wants to leave a cluster it can use this command but its status will be shown as down.
+  - docker swarm leave  --force                   : if a node wants to leave a cluster it can use this command but its status will be shown as down.
+  -
