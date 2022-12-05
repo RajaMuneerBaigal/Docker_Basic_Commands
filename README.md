@@ -137,14 +137,14 @@
   -  docker service inspect --pretty <service-name>         : to inspect service in a more readable way
   -  docker service logs <service-id>                       : to find the logs of the service created
   -  docker service rm <service-name>                       : to remove a service
-  -  docker service scale <name>=5
-  -  docker service ps <service-name>                       : to list a service with its name
-  -  docker node update --availability drain <node-name>    : it will not allocate services to that node specified
-  -  docker node upate --availability active <node-name>    : it will active the node again and tasks will be assigned to it.
+  -  docker service scale -name/id-=5
+  -  docker service ps -service-name-                       : to list a service with its name
+  -  docker node update --availability drain -node-name-    : it will not allocate services to that node specified
+  -  docker node upate --availability active -node-name-    : it will active the node again and tasks will be assigned to it.
   ### Some important flags regarding creating services in docker swarm
-   -  --name <service-name>                                 : flag used to give name to a service
+   -  --name -service-name-                                 : flag used to give name to a service
    -  --mode global                                         : flag used to create service in every node including manager
-   -  --replicas <number>                                   : how many replicas of current service you want to run in cluster or docker swarm.  
+   -  --replicas -number-                                   : how many replicas of current service you want to run in cluster or docker swarm.  
   ### The commands to be run on worker nodes are as follows:
   - docker swarm leave  --force                   : if a node wants to leave a cluster it can use this command but its status will be shown as down.
   -
