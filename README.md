@@ -134,17 +134,22 @@
   -  watch docker container ls                              : list all containers after one seconds
   -  docker service create -imageName-                      : will create a service on all nodes inside the cluster
   -  docker service inspect -service-id-                    : to inspect a service with service id
-  -  docker service inspect --pretty -service-name>-        : to inspect service in a more readable way
+  -  docker service inspect --pretty -service-name-         : to inspect service in a more readable way
   -  docker service logs <service-id>                       : to find the logs of the service created
-  -  docker service rm -service-name-                      : to remove a service
+  -  docker service rm -service-name-                       : to remove a service
   -  docker service scale -name/id-=5
   -  docker service ps -service-name-                       : to list a service with its name
   -  docker node update --availability drain -node-name-    : it will not allocate services to that node specified
-  -  docker node upate --availability active -node-name-    : it will active the node again and tasks will be assigned to it.
+  -  docker node upate --availability active -node-name-    : it will active the node again and tasks will be assigned to it
+  -  docker node update --label-add="ssd=true" -node-name-  : this will add a label to our node to which we can add tasks or services. e.g ssd node
   ### Some important flags regarding creating services in docker swarm
    -  --name -service-name-                                 : flag used to give name to a service
    -  --mode global                                         : flag used to create service in every node including manager
    -  --replicas -number-                                   : how many replicas of current service you want to run in cluster or docker swarm.  
+   -  -p  8080:80                                           : to expose a port
+   -  --constraint="node.role==manager"                     : this will create all the services in manager mode
+   -  --constraint="node.role==worker"                      : this will create all the services in worker node
+   -  --constraint="node.label.ssd==true"                   : this will create all the services in a node with label ssd and ssd=true
   ### The commands to be run on worker nodes are as follows:
   - docker swarm leave  --force                   : if a node wants to leave a cluster it can use this command but its status will be shown as down.
   -
