@@ -121,4 +121,14 @@
    ## Docker Swarm commands 
    ==============================================================================
   ### The commands to be run on manager node are as follows:
-  -  docker init                                         
+  -  docker swarm init --advertise-addr <ip>                : this will create the current machine as manager node in docker swarm cluster
+  -  docker swarm init                                      : same as above
+  -  docker info | head -50                                 : to check the status of docker swarm if initialized or not.
+  -  docker node ls                                         : to list down all docker nodes
+  -  docker swarm join --token <token>                      : to join a worker node to cluster 
+  -  docker swarm join-token worker/manager                 : to get the token after missing it. this will give token for joining nodes as manager or wrk
+  -  docker node rm -f <node-name>                          : to remove a node from cluster or swarm
+  
+  
+  ### The commands to be run on worker nodes are as follows:
+  - docker swarm leave                     : if a node wants to leave a cluster it can use this command but its status will be shown as down.
