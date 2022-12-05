@@ -134,6 +134,7 @@
   -  watch docker container ls                              : list all containers after one seconds
   -  docker service create <imageName>                      : will create a service on all nodes inside the cluster
   -  docker service inspect <service-id>                    : to inspect a service with service id
+  -  docker service inspect --pretty <service-name>         : to inspect service in a more readable way
   -  docker service logs <service-id>                       : to find the logs of the service created
   -  docker service rm <service-name>                       : to remove a service
   -  docker service scale <name>=5
