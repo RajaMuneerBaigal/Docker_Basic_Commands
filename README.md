@@ -121,18 +121,18 @@
    ## Docker Swarm commands 
    ==============================================================================
   ### The commands to be run on manager node are as follows:
-  -  docker swarm init --advertise-addr <ip>                : this will create the current machine as manager node in docker swarm cluster
+  -  docker swarm init --advertise-addr -ip-                : this will create the current machine as manager node in docker swarm cluster
   -  docker swarm init                                      : same as above
   -  docker info | head -50                                 : to check the status of docker swarm if initialized or not.
   -  docker node ls                                         : to list down all docker nodes
-  -  docker swarm join --token <token>                      : to join a worker node to cluster 
+  -  docker swarm join --token -token-                      : to join a worker node to cluster 
   -  docker swarm join-token worker/manager                 : to get the token after missing it. this will give token for joining nodes as manager or wrk
-  -  docker node rm -f <node-name>                          : to remove a node from cluster or swarm
-  -  docker node inspect <node-name>                        : to inspect a node just like container inspect
-  -  docker node promote <node1> <node2>                    : to promote a node to manager node
-  -  docker node demote <node1> <node2>                     : to demote a node to worker node
+  -  docker node rm -f -node-name-                          : to remove a node from cluster or swarm
+  -  docker node inspect -node-name-                        : to inspect a node just like container inspect
+  -  docker node promote -node1- -node2-                    : to promote a node to manager node
+  -  docker node demote -node1- -node2-                     : to demote a node to worker node
   -  watch docker container ls                              : list all containers after one seconds
-  -  docker service create <imageName>                      : will create a service on all nodes inside the cluster
+  -  docker service create -imageName-                      : will create a service on all nodes inside the cluster
   -  docker service inspect <service-id>                    : to inspect a service with service id
   -  docker service inspect --pretty <service-name>         : to inspect service in a more readable way
   -  docker service logs <service-id>                       : to find the logs of the service created
