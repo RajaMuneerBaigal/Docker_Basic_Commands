@@ -100,6 +100,7 @@
   There is a concept of manager and worker node in docker swarm. Manager node assigns tasks to nodes inside the cluster and sometimes itslef also performs some tasks.The activities of the cluster are controlled by a swarm manager, and machines that have joined the cluster are referred to as nodes.
   Docker Swarm has two types of services: replicated and global.
   ![image](https://user-images.githubusercontent.com/105891199/205648617-77e3182f-3876-466b-96aa-62fc2a688d39.png)
+  ![image](https://user-images.githubusercontent.com/105891199/205650359-e90013db-f1dc-4621-ab79-4de4476cb0a0.png)
 
   One of the key benefits associated with the operation of a docker swarm is the high level of availability offered for applications.
   Some other key   features of docker swarm are:
