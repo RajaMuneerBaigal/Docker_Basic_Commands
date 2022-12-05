@@ -92,3 +92,25 @@
   - docker network ls
   - docker image ls
   - docker container ls
+  
+   ==============================================================================
+  
+   ==============================================================================
+  A Docker Swarm is a group of either physical or virtual machines that are running the Docker application and that have been configured to join together   in a cluster. A cluster is a group of nodes joined together to perform a task. Nodes are actually virtual machines connected together using docker api.
+  There is a concept of manager and worker node in docker swarm. Manager node assigns tasks to nodes inside the cluster and sometimes itslef also performs some tasks.The activities of the cluster are controlled by a swarm manager, and machines that have joined the cluster are referred to as nodes.
+  Docker Swarm has two types of services: replicated and global.
+  ![image](https://user-images.githubusercontent.com/105891199/205648617-77e3182f-3876-466b-96aa-62fc2a688d39.png)
+
+  One of the key benefits associated with the operation of a docker swarm is the high level of availability offered for applications.
+  Some other key   features of docker swarm are:
+  1- Load balancing
+  2- Decentraliztion
+  3- Security
+  4- high availability
+  5- low downtime
+
+   ==============================================================================
+   ## Docker Swarm commands 
+   ==============================================================================
+  ### The commands to be run on manager node are as follows:
+  -  docker init                                         
