@@ -109,6 +109,9 @@
   3- Security
   4- high availability
   5- low downtime
+  ### Docker architecture
+  ![image](https://user-images.githubusercontent.com/105891199/205650880-557dac9c-f1a7-4713-a0b0-13c6d938b30f.png)
+
 
    ==============================================================================
    ## Docker Swarm commands 
