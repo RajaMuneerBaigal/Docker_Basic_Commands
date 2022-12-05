@@ -112,6 +112,10 @@
   ### Docker architecture
   ![image](https://user-images.githubusercontent.com/105891199/205650880-557dac9c-f1a7-4713-a0b0-13c6d938b30f.png)
 
+  ### How Docker Swarm Work
+  ![image](https://user-images.githubusercontent.com/105891199/205651248-057b24cc-c0e5-4a56-92f9-1877bddec41c.png)
+  ![image](https://user-images.githubusercontent.com/105891199/205651562-c91d9dad-cbf6-41bb-a6c0-034fa4a3afe6.png)
+
 
    ==============================================================================
    ## Docker Swarm commands 
