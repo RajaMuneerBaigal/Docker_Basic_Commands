@@ -95,10 +95,18 @@
    
   ## Docker Secret
    ==============================================================================
-   - docker secret create                : to create a secret
-   - docker secret ls                    : to list all secrets
-   - docker secret rm  -id-              : to remove secrets
-   - docker secret inspect               : to inspect a secret
+   - docker secret create  "name" -            : to create a secret. here name is any name .i.e dbpass etc and minus at the enter is used to input secret
+   - docker secret create "filename" myfile    : to create a secret using file.i.e in myfile I can save my secret and create a filename with secret insid
+   - docker secret ls                          : to list all secrets
+   - docker secret rm  -id-                    : to remove secrets
+   - docker secret inspect                     : to inspect a secret
+  
+  ### NOTE: the secret created needs to be associated with a service in docker swarm while creating a service with --secret "name"  flag otherwise it won't be accessbile to any service without properly associating.
+  e.g docker service create --secret dbpass alpine ping 8.8.8.8
+  
+  The secrets will be stored inside the container at the location /run/secrets/secretname
+  To create a database service such as mysql with our secret will be as follows:
+  docker service create  --secret dbpass -e MYSQL_ROOT_PASSWORD_FILE=/run/secrets/dbpass mysql
   
   ## Docker Swarm
    ==============================================================================
@@ -157,4 +165,10 @@
    -  --constraint="node.label.ssd==true"                   : this will create all the services in a node with label ssd and ssd=true
   ### The commands to be run on worker nodes are as follows:
   - docker swarm leave  --force                   : if a node wants to leave a cluster it can use this command but its status will be shown as down.
-  -
+  
+   ==============================================================================
+   ## Docker Stack
+   With docker compose we have a yaml file which is used to create services but the issue with docker compose is that when we write docker compose up it creates services only on the machine on which the command is run. for multiple machines we have to do it manually which is not an efficient way. With docker stack we can deploy services to all nodes in a cluster using a single command.Though it uses the same docker compose file
+  
+ - docker stack deploy -c docker-compose.yml "stackname"
+ - docker stack --help   to find more options for docker stack
