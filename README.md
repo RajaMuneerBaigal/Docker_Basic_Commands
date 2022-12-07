@@ -119,7 +119,6 @@
 
    ==============================================================================
    ## Docker Swarm commands 
-   ==============================================================================
   ### The commands to be run on manager node are as follows:
   -  docker swarm init --advertise-addr -ip-                : this will create the current machine as manager node in docker swarm cluster
   -  docker swarm init                                      : same as above
