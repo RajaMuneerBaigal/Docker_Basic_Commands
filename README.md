@@ -92,8 +92,14 @@
   - docker network ls
   - docker image ls
   - docker container ls
-  
+   
+  ## Docker Secret
    ==============================================================================
+   - docker secret create                : to create a secret
+   - docker secret ls                    : to list all secrets
+   - docker secret rm  -id-              : to remove secrets
+   - docker secret inspect               : to inspect a secret
+  
   ## Docker Swarm
    ==============================================================================
    A Docker Swarm is a group of either physical or virtual machines that are running the Docker application and that have been configured to join  together   in a cluster. A cluster is a group of nodes joined together to perform a task. Nodes are actually virtual machines connected together using docker api.
