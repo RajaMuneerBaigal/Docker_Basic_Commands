@@ -23,7 +23,7 @@
   - to pull and run a docker image or to pull and run a specific version of docker image
 
 ### docker start <container_id>
-  - to start a container with specific id
+  - to start a container with specific id. this can only be run when a container was stopped and we want to run the container again.
 
 ### docker stop <container_id>
   - to stop a container with specific id
@@ -48,12 +48,12 @@
 
 ## Docker commands for troubleshooting
 
- ### docker logs <containerid> or docker logs <containername>
+ ### docker logs "containerid" or docker logs "containername"
    - shows logs of the container for trouble shooting. if any container is facing some issues we can use logs 
      to detect.
 
  ### docker run -d -p6001:6000 --name new_name imagename
-   - this renames a previous image with old name to new name and creates a new container image.
+   - this runs a container with a name given which then can be used to inpsect logs.
  
  ### docker exec -it <image_id> /bin/bash
    - to get inside the container and execute terminal
@@ -87,7 +87,7 @@
 
   ==============================================================================
   
-  ## Commands to delete all volumes, containers and images
+  ## Commands to list all volumes, containers and images
   - docker volume ls
   - docker network ls
   - docker image ls
