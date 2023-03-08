@@ -19,19 +19,19 @@
 ### docker pull <image_name> or docker pull <image_name>:version 
   - to pull a docker image from a repository to our local environment (dockerhub/codecommit)
 
-### docker run "imagename" or docker run "imagename":version
+### docker run <image_name> or docker run <image_name>:version
   - to pull and run a docker image or to pull and run a specific version of docker image
 
-### docker start "container_id"
+### docker start <container_id>
   - to start a container with specific id. this can only be run when a container was stopped and we want to run the container again.
 
-### docker stop "container_id"
+### docker stop <container_id>
   - to stop a container with specific id
 
-### docker run -d "imagename" 
+### docker run -d <image_name> 
   - to run a docker container in deattached mode so if we want to use terminal again i.e it actually runs in background in deattached mode
 
-### docker run -p6000:6001 "imagename"
+### docker run -p6000:6001 <image_name>
   - to bind a local host(laptop) port to a docker container port. Here we are running a docker image with specific image name
   and making it run on specific 6000 port on our local host.6000 is our laptop port while 6001 is container port.
 
