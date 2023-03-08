@@ -16,7 +16,7 @@
 
 ## Some Basic Docker Commands
 
-### docker pull <imagename> or docker pull <imagename>:version 
+### docker pull <image_name> or docker pull <image_name>:version 
   - to pull a docker image from a repository to our local environment (dockerhub/codecommit)
 
 ### docker run "imagename" or docker run "imagename":version
