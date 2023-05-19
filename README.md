@@ -172,3 +172,28 @@
   
  - docker stack deploy -c docker-compose.yml "stackname"
  - docker stack --help   to find more options for docker stack
+  
+  
+  
+  ----------------------------------------------------------
+  ----------------------------------------------------------
+### Some Very Useful commands docker commands combined with linux:
+  - To remove every volume except for one:
+    - docker volume rm  $(docker volume ls | grep -v "jenkins_home" | awk 'NR>1 {print $2}')
+    - docker volume rm  $(docker ps -a | grep -v "jenkins_home" | cut -d ' ' -f6)
+   
+  **Note:** To remove multiple volumes just add \|volume-name with above "jenkins_home" i.e "jenkins_home \| volume-name"
+
+  - To remove every stopped container except for one:
+    - docker rm $(docker ps -a -q | grep -v "my_container_id")
+  
+  - To remove every image except image with the names jenkins and dcm4che
+    - docker rmi $(docker images  | grep -v "dcm4che\|jenkins" | awk 'NR>1 {print $1}')
+  
+  **Note:** While using above command if we have multiple images with same name like node with multiple versions above command will not work. We need to update it as below to make it work and delete all node images with specific versions:
+  
+ **The updated command will be**
+    - docker rmi $(docker images  | grep -v "dcm4che\|jenkins" | awk 'NR>1 {print $1":"$2}')
+
+  
+      
