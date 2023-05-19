@@ -192,7 +192,7 @@
   
   **Note:** While using above command if we have multiple images with same name like node with multiple versions above command will not work. We need to update it as below to make it work and delete all node images with specific versions:
   
- **The updated command will be**
+ **The updated command will be:**
     - docker rmi $(docker images  | grep -v "dcm4che\\|jenkins" | awk 'NR>1 {print $1":"$2}')
 
   
