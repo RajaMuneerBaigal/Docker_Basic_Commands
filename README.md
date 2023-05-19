@@ -182,7 +182,7 @@
     - docker volume rm  $(docker volume ls | grep -v "jenkins_home" | awk 'NR>1 {print $2}')
     - docker volume rm  $(docker ps -a | grep -v "jenkins_home" | cut -d ' ' -f6)
    
-  **Note:** To remove multiple volumes just add "forward_slash(\)|volume-name" with above "jenkins_home" i.e 'jenkins_home forward_slash(\)| volume-name'
+  **Note:** To remove multiple volumes just add "\/|volume-name" with above "jenkins_home" i.e 'jenkins_home \/)| volume-name'
 
   - To remove every stopped container except for one:
     - docker rm $(docker ps -a -q | grep -v "my_container_id")
